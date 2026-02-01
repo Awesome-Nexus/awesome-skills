@@ -1,0 +1,76 @@
+import { defineComponent, mergeProps, unref, useSSRContext } from 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/vue/index.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate } from 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/vue/server-renderer/index.mjs';
+import { Wrench, ExternalLink } from 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/lucide-vue-next/dist/cjs/lucide-vue-next.js';
+import { u as useHead } from './v3-0mMLnyVi.mjs';
+import './server.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/ofetch/dist/node.mjs';
+import '../_/renderer.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/h3/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/ufo/dist/index.mjs';
+import '../nitro/nitro.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/destr/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/hookable/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unstorage/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unstorage/drivers/fs.mjs';
+import 'node:crypto';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/ohash/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/klona/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/defu/dist/defu.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/scule/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unctx/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/radix3/dist/index.mjs';
+import 'node:fs';
+import 'node:url';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/pathe/dist/index.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unhead/dist/server.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/devalue/index.js';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unhead/dist/utils.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/unhead/dist/plugins.mjs';
+import 'file:///home/lpatel/Code/LP-DEV/Awesome-Skills/node_modules/vue-router/vue-router.node.mjs';
+
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "kits",
+  __ssrInlineRender: true,
+  setup(__props) {
+    useHead({
+      title: "Kits - AI Development Tools",
+      meta: [
+        { name: "description", content: "Development frameworks, SDKs, vector databases, and AI tools." }
+      ]
+    });
+    const sections = [
+      { name: "Frameworks", items: ["LangChain", "LlamaIndex", "Haystack", "Semantic Kernel", "CrewAI"] },
+      { name: "Vector Databases", items: ["Pinecone", "Weaviate", "Chroma", "Qdrant", "Milvus", "pgvector"] },
+      { name: "AI Infrastructure", items: ["Ollama", "LiteLLM", "vLLM", "Text Generation Inference"] },
+      { name: "Development Tools", items: ["OpenAI SDK", "Anthropic SDK", "Hugging Face", "Modal", "Banana"] }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-5xl mx-auto space-y-8" }, _attrs))}><div class="flex items-start gap-6"><div class="p-4 bg-emerald-500/20 rounded-2xl">`);
+      _push(ssrRenderComponent(unref(Wrench), { class: "w-10 h-10 text-emerald-400" }, null, _parent));
+      _push(`</div><div><h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Kits</h1><p class="text-gray-400 text-lg"> Development frameworks, SDKs, vector databases, and tools. </p></div></div><div class="p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-xl"><div class="flex items-center justify-between flex-wrap gap-4"><div><h3 class="text-lg font-semibold text-white mb-1">View Complete Kits Catalog</h3><p class="text-gray-400 text-sm">Browse 500+ frameworks, SDKs, and development tools</p></div><a href="https://github.com/lpatel/awesome-skills/blob/main/resources/kits/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-colors"> View on GitHub `);
+      _push(ssrRenderComponent(unref(ExternalLink), { class: "w-4 h-4" }, null, _parent));
+      _push(`</a></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!--[-->`);
+      ssrRenderList(sections, (section) => {
+        _push(`<div class="p-6 bg-space-900 rounded-xl border border-space-800"><h3 class="text-lg font-semibold text-white mb-4">${ssrInterpolate(section.name)}</h3><div class="flex flex-wrap gap-2"><!--[-->`);
+        ssrRenderList(section.items, (item) => {
+          _push(`<span class="px-3 py-1 bg-space-800 text-gray-300 text-sm rounded-full">${ssrInterpolate(item)}</span>`);
+        });
+        _push(`<!--]--></div></div>`);
+      });
+      _push(`<!--]--></div><div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4"><div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center"><div class="text-2xl font-bold text-emerald-400">500+</div><div class="text-sm text-gray-400">Tools</div></div><div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center"><div class="text-2xl font-bold text-emerald-400">50+</div><div class="text-sm text-gray-400">Frameworks</div></div><div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center"><div class="text-2xl font-bold text-emerald-400">20+</div><div class="text-sm text-gray-400">Vector DBs</div></div><div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center"><div class="text-2xl font-bold text-emerald-400">100%</div><div class="text-sm text-gray-400">Open Source</div></div></div></div>`);
+    };
+  }
+});
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/resources/kits.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+
+export { _sfc_main as default };
+//# sourceMappingURL=kits-Ci4mCiF2.mjs.map

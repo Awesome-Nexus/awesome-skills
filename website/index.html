@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome AI SKILL - AI Resource Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">AI SKILL</span>
+            </a>
+            <div class="nav-links">
+                <a href="#framework">Framework</a>
+                <a href="#categories">Categories</a>
+                <a href="#mcp">MCP</a>
+                <a href="https://github.com/lpatel/awesome-ai-skill" target="_blank">GitHub</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">🚀 5,000+ Curated Resources</div>
+            <h1>Awesome AI <span class="gradient-text">SKILL</span></h1>
+            <p class="hero-subtitle">
+                The world's most comprehensive AI development resource hub.<br>
+                Systems • Kits • Intelligence • Learning • Links
+            </p>
+            <div class="hero-actions">
+                <a href="#categories" class="btn btn-primary">Explore Resources</a>
+                <a href="https://github.com/lpatel/awesome-ai-skill" class="btn btn-secondary">
+                    <span>⭐ Star on GitHub</span>
+                </a>
+            </div>
+            
+            <!-- SKILL Visual -->
+            <div class="skill-visual">
+                <div class="skill-letter" data-category="systems">
+                    <div class="letter">S</div>
+                    <div class="label">Systems</div>
+                    <div class="icon">⚙️</div>
+                </div>
+                <div class="skill-letter" data-category="kits">
+                    <div class="letter">K</div>
+                    <div class="label">Kits</div>
+                    <div class="icon">🧰</div>
+                </div>
+                <div class="skill-letter" data-category="intelligence">
+                    <div class="letter">I</div>
+                    <div class="label">Intelligence</div>
+                    <div class="icon">🧠</div>
+                </div>
+                <div class="skill-letter" data-category="learning">
+                    <div class="letter">L</div>
+                    <div class="label">Learning</div>
+                    <div class="icon">📚</div>
+                </div>
+                <div class="skill-letter" data-category="links">
+                    <div class="letter">L</div>
+                    <div class="label">Links</div>
+                    <div class="icon">🔗</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="search" class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search 5,000+ AI resources...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="search-tags">
+                <span class="tag active" data-filter="all">All</span>
+                <span class="tag" data-filter="systems">Systems</span>
+                <span class="tag" data-filter="kits">Kits</span>
+                <span class="tag" data-filter="intelligence">Intelligence</span>
+                <span class="tag" data-filter="learning">Learning</span>
+                <span class="tag" data-filter="links">Links</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2>Explore by Category</h2>
+            
+            <div class="category-grid">
+                <!-- Systems -->
+                <div class="category-card" data-category="systems">
+                    <div class="card-header">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-badge">S</div>
+                    </div>
+                    <h3>Systems</h3>
+                    <p>Foundation models, LLMs, multimodal AI, and core infrastructure.</p>
+                    <div class="card-stats">
+                        <span>200+ Models</span>
+                        <span>50+ APIs</span>
+                    </div>
+                    <ul class="resource-list">
+                        <li><a href="https://openai.com" target="_blank">GPT-4, GPT-4o</a></li>
+                        <li><a href="https://anthropic.com" target="_blank">Claude 3.5 Sonnet</a></li>
+                        <li><a href="https://ollama.com" target="_blank">Ollama (Local)</a></li>
+                        <li><a href="https://huggingface.co" target="_blank">Hugging Face Hub</a></li>
+                    </ul>
+                    <a href="../resources/systems/" class="card-link">View All →</a>
+                </div>
+
+                <!-- Kits -->
+                <div class="category-card" data-category="kits">
+                    <div class="card-header">
+                        <div class="card-icon">🧰</div>
+                        <div class="card-badge">K</div>
+                    </div>
+                    <h3>Kits</h3>
+                    <p>Development frameworks, SDKs, vector databases, and tools.</p>
+                    <div class="card-stats">
+                        <span>100+ Frameworks</span>
+                        <span>50+ Tools</span>
+                    </div>
+                    <ul class="resource-list">
+                        <li><a href="https://langchain.com" target="_blank">LangChain</a></li>
+                        <li><a href="https://www.llamaindex.ai" target="_blank">LlamaIndex</a></li>
+                        <li><a href="https://www.trychroma.com" target="_blank">Chroma Vector DB</a></li>
+                        <li><a href="https://github.com/BerriAI/litellm" target="_blank">LiteLLM</a></li>
+                    </ul>
+                    <a href="../resources/kits/" class="card-link">View All →</a>
+                </div>
+
+                <!-- Intelligence -->
+                <div class="category-card" data-category="intelligence">
+                    <div class="card-header">
+                        <div class="card-icon">🧠</div>
+                        <div class="card-badge">I</div>
+                    </div>
+                    <h3>Intelligence</h3>
+                    <p>AI agents, multi-agent systems, and autonomous workflows.</p>
+                    <div class="card-stats">
+                        <span>80+ Frameworks</span>
+                        <span>40+ Platforms</span>
+                    </div>
+                    <ul class="resource-list">
+                        <li><a href="https://www.crewai.com" target="_blank">CrewAI</a></li>
+                        <li><a href="https://github.com/microsoft/autogen" target="_blank">Microsoft AutoGen</a></li>
+                        <li><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">AutoGPT</a></li>
+                        <li><a href="https://dify.ai" target="_blank">Dify Platform</a></li>
+                    </ul>
+                    <a href="../resources/intelligence/" class="card-link">View All →</a>
+                </div>
+
+                <!-- Learning -->
+                <div class="category-card" data-category="learning">
+                    <div class="card-header">
+                        <div class="card-icon">📚</div>
+                        <div class="card-badge">L</div>
+                    </div>
+                    <h3>Learning</h3>
+                    <p>Courses, tutorials, research papers, and datasets.</p>
+                    <div class="card-stats">
+                        <span>500+ Courses</span>
+                        <span>1000+ Papers</span>
+                    </div>
+                    <ul class="resource-list">
+                        <li><a href="https://course.fast.ai" target="_blank">Fast.ai</a></li>
+                        <li><a href="https://www.deeplearning.ai" target="_blank">DeepLearning.AI</a></li>
+                        <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arXiv AI</a></li>
+                        <li><a href="https://paperswithcode.com" target="_blank">Papers with Code</a></li>
+                    </ul>
+                    <a href="../resources/learning/" class="card-link">View All →</a>
+                </div>
+
+                <!-- Links -->
+                <div class="category-card" data-category="links">
+                    <div class="card-header">
+                        <div class="card-icon">🔗</div>
+                        <div class="card-badge">L</div>
+                    </div>
+                    <h3>Links</h3>
+                    <p>MCP servers, plugins, API integrations, and connectivity.</p>
+                    <div class="card-stats">
+                        <span>60+ MCP Servers</span>
+                        <span>100+ APIs</span>
+                    </div>
+                    <ul class="resource-list">
+                        <li><a href="https://modelcontextprotocol.io" target="_blank">MCP Protocol</a></li>
+                        <li><a href="https://github.com/modelcontextprotocol/servers" target="_blank">Official Servers</a></li>
+                        <li><a href="../resources/links/MCP-SERVER-REGISTRY.md">Server Registry</a></li>
+                        <li><a href="https://claude.ai/download" target="_blank">Claude Desktop</a></li>
+                    </ul>
+                    <a href="../resources/links/" class="card-link">View All →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mcp" class="mcp-highlight">
+        <div class="container">
+            <div class="mcp-content">
+                <div class="mcp-text">
+                    <div class="mcp-badge">⭐ Featured</div>
+                    <h2>Model Context Protocol</h2>
+                    <p>Connect AI assistants to your tools and data with MCP — the USB-C for AI applications.</p>
+                    <ul class="mcp-features">
+                        <li>🔗 60+ ready-to-use servers</li>
+                        <li>🔒 Secure, local-first architecture</li>
+                        <li>⚡ Works with Claude, Cline, Zed, and more</li>
+                        <li>🛠️ Build your own in minutes</li>
+                    </ul>
+                    <div class="mcp-actions">
+                        <a href="../docs/MCP-QUICKSTART.md" class="btn btn-primary">Quick Start Guide</a>
+                        <a href="../resources/links/MCP-SERVER-REGISTRY.md" class="btn btn-secondary">Browse Servers</a>
+                    </div>
+                </div>
+                <div class="mcp-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-title">claude_desktop_config.json</span>
+                        </div>
+                        <pre class="code-content"><code>{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/me/projects"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "..."
+      }
+    }
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Resources</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">AI Models</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60+</div>
+                    <div class="stat-label">MCP Servers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="paths" class="learning-paths">
+        <div class="container">
+            <h2>Learning Paths</h2>
+            <p class="section-subtitle">Structured journeys from beginner to expert</p>
+            
+            <div class="path-grid">
+                <div class="path-card">
+                    <div class="path-icon">🌱</div>
+                    <h3>AI Beginner</h3>
+                    <p>Start your AI journey with Python basics and foundation models.</p>
+                    <div class="path-steps">
+                        <span>Python</span>
+                        <span>→</span>
+                        <span>OpenAI API</span>
+                        <span>→</span>
+                        <span>Fast.ai</span>
+                    </div>
+                </div>
+                
+                <div class="path-card">
+                    <div class="path-icon">👨‍💻</div>
+                    <h3>AI Developer</h3>
+                    <p>Build production LLM applications with frameworks and tools.</p>
+                    <div class="path-steps">
+                        <span>LangChain</span>
+                        <span>→</span>
+                        <span>Vector DBs</span>
+                        <span>→</span>
+                        <span>RAG</span>
+                    </div>
+                </div>
+                
+                <div class="path-card">
+                    <div class="path-icon">🤖</div>
+                    <h3>Agent Engineer</h3>
+                    <p>Create autonomous AI agents and multi-agent systems.</p>
+                    <div class="path-steps">
+                        <span>CrewAI</span>
+                        <span>→</span>
+                        <span>Multi-Agent</span>
+                        <span>→</span>
+                        <span>Tool Use</span>
+                    </div>
+                </div>
+                
+                <div class="path-card">
+                    <div class="path-icon">🔌</div>
+                    <h3>MCP Specialist</h3>
+                    <p>Master the Model Context Protocol and build integrations.</p>
+                    <div class="path-steps">
+                        <span>MCP Spec</span>
+                        <span>→</span>
+                        <span>Custom Server</span>
+                        <span>→</span>
+                        <span>Ecosystem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🧠</span>
+                    <span>AI SKILL</span>
+                </div>
+                <p class="footer-text">
+                    A curated collection of AI resources. Open source and community maintained.
+                </p>
+                <div class="footer-links">
+                    <a href="../docs/SKILL_MASTER_INDEX.md">Master Index</a>
+                    <a href="../CONTRIBUTING.md">Contribute</a>
+                    <a href="https://github.com/lpatel/awesome-ai-skill">GitHub</a>
+                </div>
+                <p class="footer-license">
+                    CC0 1.0 Universal License • Last Updated February 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
