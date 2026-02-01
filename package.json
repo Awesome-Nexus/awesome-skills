@@ -1,23 +1,31 @@
 {
   "name": "awesome-skills",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A comprehensive framework for building AI-powered applications with Model Context Protocol",
+  "type": "module",
+  "private": false,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port 3311",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "@nuxt/content": "^3.11.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@vueuse/nuxt": "^14.2.0",
+    "better-sqlite3": "^12.5.0",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.563.0",
+    "nuxt": "^3.10.0",
+    "sharp": "^0.34.5",
+    "tailwind-merge": "^3.4.0",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.4",
-    "@vueuse/nuxt": "^14.2.0",
-    "nuxt": "^3.8.0",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.7.16",
-    "@heroicons/vue": "^2.0.18",
-    "lucide-vue-next": "^0.563.0"
   }
 }

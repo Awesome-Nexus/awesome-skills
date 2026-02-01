@@ -7,6 +7,7 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
+import 'better-sqlite3';
 
 const sitemap_xml_get = defineEventHandler(() => {
   const baseUrl = "https://awesome-ai-skill.vercel.app";

@@ -10,7 +10,8 @@ declare global {
   const clearError: typeof import('../../node_modules/nuxt/dist/app/composables/error').clearError
   const clearNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').clearNuxtData
   const clearNuxtState: typeof import('../../node_modules/nuxt/dist/app/composables/state').clearNuxtState
-  const computed: typeof import('../../node_modules/vue').computed
+  const cn: typeof import('../../utils/cn').cn
+  const computed: typeof import('vue').computed
   const computedAsync: typeof import('../../node_modules/@vueuse/core').computedAsync
   const computedEager: typeof import('../../node_modules/@vueuse/core').computedEager
   const computedInject: typeof import('../../node_modules/@vueuse/core').computedInject
@@ -27,12 +28,12 @@ declare global {
   const createSharedComposable: typeof import('../../node_modules/@vueuse/core').createSharedComposable
   const createTemplatePromise: typeof import('../../node_modules/@vueuse/core').createTemplatePromise
   const createUnrefFn: typeof import('../../node_modules/@vueuse/core').createUnrefFn
-  const customRef: typeof import('../../node_modules/vue').customRef
+  const customRef: typeof import('vue').customRef
   const debouncedRef: typeof import('../../node_modules/@vueuse/core').debouncedRef
   const debouncedWatch: typeof import('../../node_modules/@vueuse/core').debouncedWatch
   const defineAppConfig: typeof import('../../node_modules/nuxt/dist/app/nuxt').defineAppConfig
-  const defineAsyncComponent: typeof import('../../node_modules/vue').defineAsyncComponent
-  const defineComponent: typeof import('../../node_modules/vue').defineComponent
+  const defineAsyncComponent: typeof import('vue').defineAsyncComponent
+  const defineComponent: typeof import('vue').defineComponent
   const defineLazyHydrationComponent: typeof import('../../node_modules/nuxt/dist/app/composables/lazy-hydration').defineLazyHydrationComponent
   const defineNuxtComponent: typeof import('../../node_modules/nuxt/dist/app/composables/component').defineNuxtComponent
   const defineNuxtLink: typeof import('../../node_modules/nuxt/dist/app/components/nuxt-link').defineNuxtLink
@@ -43,74 +44,79 @@ declare global {
   const definePayloadReducer: typeof import('../../node_modules/nuxt/dist/app/composables/payload').definePayloadReducer
   const definePayloadReviver: typeof import('../../node_modules/nuxt/dist/app/composables/payload').definePayloadReviver
   const eagerComputed: typeof import('../../node_modules/@vueuse/core').eagerComputed
-  const effect: typeof import('../../node_modules/vue').effect
-  const effectScope: typeof import('../../node_modules/vue').effectScope
+  const effect: typeof import('vue').effect
+  const effectScope: typeof import('vue').effectScope
   const extendRef: typeof import('../../node_modules/@vueuse/core').extendRef
   const getAppManifest: typeof import('../../node_modules/nuxt/dist/app/composables/manifest').getAppManifest
-  const getCurrentInstance: typeof import('../../node_modules/vue').getCurrentInstance
-  const getCurrentScope: typeof import('../../node_modules/vue').getCurrentScope
+  const getCurrentInstance: typeof import('vue').getCurrentInstance
+  const getCurrentScope: typeof import('vue').getCurrentScope
   const getRouteRules: typeof import('../../node_modules/nuxt/dist/app/composables/manifest').getRouteRules
-  const h: typeof import('../../node_modules/vue').h
-  const hasInjectionContext: typeof import('../../node_modules/vue').hasInjectionContext
+  const h: typeof import('vue').h
+  const hasInjectionContext: typeof import('vue').hasInjectionContext
   const ignorableWatch: typeof import('../../node_modules/@vueuse/core').ignorableWatch
-  const inject: typeof import('../../node_modules/vue').inject
+  const inject: typeof import('vue').inject
   const injectHead: typeof import('../../node_modules/nuxt/dist/app/composables/head').injectHead
   const injectLocal: typeof import('../../node_modules/@vueuse/core').injectLocal
   const isDefined: typeof import('../../node_modules/@vueuse/core').isDefined
   const isNuxtError: typeof import('../../node_modules/nuxt/dist/app/composables/error').isNuxtError
   const isPrerendered: typeof import('../../node_modules/nuxt/dist/app/composables/payload').isPrerendered
-  const isProxy: typeof import('../../node_modules/vue').isProxy
-  const isReactive: typeof import('../../node_modules/vue').isReactive
-  const isReadonly: typeof import('../../node_modules/vue').isReadonly
-  const isRef: typeof import('../../node_modules/vue').isRef
-  const isShallow: typeof import('../../node_modules/vue').isShallow
+  const isProxy: typeof import('vue').isProxy
+  const isReactive: typeof import('vue').isReactive
+  const isReadonly: typeof import('vue').isReadonly
+  const isRef: typeof import('vue').isRef
+  const isShallow: typeof import('vue').isShallow
   const isVue2: typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi').isVue2
   const isVue3: typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi').isVue3
   const loadPayload: typeof import('../../node_modules/nuxt/dist/app/composables/payload').loadPayload
   const makeDestructurable: typeof import('../../node_modules/@vueuse/core').makeDestructurable
-  const markRaw: typeof import('../../node_modules/vue').markRaw
+  const markRaw: typeof import('vue').markRaw
   const navigateTo: typeof import('../../node_modules/nuxt/dist/app/composables/router').navigateTo
-  const nextTick: typeof import('../../node_modules/vue').nextTick
-  const onActivated: typeof import('../../node_modules/vue').onActivated
-  const onBeforeMount: typeof import('../../node_modules/vue').onBeforeMount
-  const onBeforeRouteLeave: typeof import('../../node_modules/vue-router').onBeforeRouteLeave
-  const onBeforeRouteUpdate: typeof import('../../node_modules/vue-router').onBeforeRouteUpdate
-  const onBeforeUnmount: typeof import('../../node_modules/vue').onBeforeUnmount
-  const onBeforeUpdate: typeof import('../../node_modules/vue').onBeforeUpdate
+  const nextTick: typeof import('vue').nextTick
+  const onActivated: typeof import('vue').onActivated
+  const onBeforeMount: typeof import('vue').onBeforeMount
+  const onBeforeRouteLeave: typeof import('vue-router').onBeforeRouteLeave
+  const onBeforeRouteUpdate: typeof import('vue-router').onBeforeRouteUpdate
+  const onBeforeUnmount: typeof import('vue').onBeforeUnmount
+  const onBeforeUpdate: typeof import('vue').onBeforeUpdate
   const onClickOutside: typeof import('../../node_modules/@vueuse/core').onClickOutside
-  const onDeactivated: typeof import('../../node_modules/vue').onDeactivated
+  const onDeactivated: typeof import('vue').onDeactivated
   const onElementRemoval: typeof import('../../node_modules/@vueuse/core').onElementRemoval
-  const onErrorCaptured: typeof import('../../node_modules/vue').onErrorCaptured
+  const onErrorCaptured: typeof import('vue').onErrorCaptured
   const onKeyStroke: typeof import('../../node_modules/@vueuse/core').onKeyStroke
   const onLongPress: typeof import('../../node_modules/@vueuse/core').onLongPress
-  const onMounted: typeof import('../../node_modules/vue').onMounted
+  const onMounted: typeof import('vue').onMounted
   const onNuxtReady: typeof import('../../node_modules/nuxt/dist/app/composables/ready').onNuxtReady
   const onPrehydrate: typeof import('../../node_modules/nuxt/dist/app/composables/ssr').onPrehydrate
-  const onRenderTracked: typeof import('../../node_modules/vue').onRenderTracked
-  const onRenderTriggered: typeof import('../../node_modules/vue').onRenderTriggered
-  const onScopeDispose: typeof import('../../node_modules/vue').onScopeDispose
-  const onServerPrefetch: typeof import('../../node_modules/vue').onServerPrefetch
+  const onRenderTracked: typeof import('vue').onRenderTracked
+  const onRenderTriggered: typeof import('vue').onRenderTriggered
+  const onScopeDispose: typeof import('vue').onScopeDispose
+  const onServerPrefetch: typeof import('vue').onServerPrefetch
   const onStartTyping: typeof import('../../node_modules/@vueuse/core').onStartTyping
-  const onUnmounted: typeof import('../../node_modules/vue').onUnmounted
-  const onUpdated: typeof import('../../node_modules/vue').onUpdated
-  const onWatcherCleanup: typeof import('../../node_modules/vue').onWatcherCleanup
+  const onUnmounted: typeof import('vue').onUnmounted
+  const onUpdated: typeof import('vue').onUpdated
+  const onWatcherCleanup: typeof import('vue').onWatcherCleanup
+  const parseMarkdown: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/parser').parseMarkdown
   const pausableWatch: typeof import('../../node_modules/@vueuse/core').pausableWatch
   const prefetchComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload').prefetchComponents
   const preloadComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload').preloadComponents
   const preloadPayload: typeof import('../../node_modules/nuxt/dist/app/composables/payload').preloadPayload
   const preloadRouteComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload').preloadRouteComponents
   const prerenderRoutes: typeof import('../../node_modules/nuxt/dist/app/composables/ssr').prerenderRoutes
-  const provide: typeof import('../../node_modules/vue').provide
+  const provide: typeof import('vue').provide
   const provideLocal: typeof import('../../node_modules/@vueuse/core').provideLocal
-  const proxyRefs: typeof import('../../node_modules/vue').proxyRefs
+  const proxyRefs: typeof import('vue').proxyRefs
+  const queryCollection: typeof import('../../node_modules/@nuxt/content/dist/runtime/client').queryCollection
+  const queryCollectionItemSurroundings: typeof import('../../node_modules/@nuxt/content/dist/runtime/client').queryCollectionItemSurroundings
+  const queryCollectionNavigation: typeof import('../../node_modules/@nuxt/content/dist/runtime/client').queryCollectionNavigation
+  const queryCollectionSearchSections: typeof import('../../node_modules/@nuxt/content/dist/runtime/client').queryCollectionSearchSections
   const reactify: typeof import('../../node_modules/@vueuse/core').reactify
   const reactifyObject: typeof import('../../node_modules/@vueuse/core').reactifyObject
-  const reactive: typeof import('../../node_modules/vue').reactive
+  const reactive: typeof import('vue').reactive
   const reactiveComputed: typeof import('../../node_modules/@vueuse/core').reactiveComputed
   const reactiveOmit: typeof import('../../node_modules/@vueuse/core').reactiveOmit
   const reactivePick: typeof import('../../node_modules/@vueuse/core').reactivePick
-  const readonly: typeof import('../../node_modules/vue').readonly
-  const ref: typeof import('../../node_modules/vue').ref
+  const readonly: typeof import('vue').readonly
+  const ref: typeof import('vue').ref
   const refAutoReset: typeof import('../../node_modules/@vueuse/core').refAutoReset
   const refDebounced: typeof import('../../node_modules/@vueuse/core').refDebounced
   const refDefault: typeof import('../../node_modules/@vueuse/core').refDefault
@@ -121,34 +127,36 @@ declare global {
   const refreshNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').refreshNuxtData
   const reloadNuxtApp: typeof import('../../node_modules/nuxt/dist/app/composables/chunk').reloadNuxtApp
   const requestIdleCallback: typeof import('../../node_modules/nuxt/dist/app/compat/idle-callback').requestIdleCallback
-  const resolveComponent: typeof import('../../node_modules/vue').resolveComponent
+  const resolveComponent: typeof import('vue').resolveComponent
   const setInterval: typeof import('../../node_modules/nuxt/dist/app/compat/interval').setInterval
   const setPageLayout: typeof import('../../node_modules/nuxt/dist/app/composables/router').setPageLayout
   const setResponseStatus: typeof import('../../node_modules/nuxt/dist/app/composables/ssr').setResponseStatus
-  const shallowReactive: typeof import('../../node_modules/vue').shallowReactive
-  const shallowReadonly: typeof import('../../node_modules/vue').shallowReadonly
-  const shallowRef: typeof import('../../node_modules/vue').shallowRef
+  const shallowReactive: typeof import('vue').shallowReactive
+  const shallowReadonly: typeof import('vue').shallowReadonly
+  const shallowRef: typeof import('vue').shallowRef
   const showError: typeof import('../../node_modules/nuxt/dist/app/composables/error').showError
+  const stringifyMarkdown: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/stringify').stringifyMarkdown
   const syncRef: typeof import('../../node_modules/@vueuse/core').syncRef
   const syncRefs: typeof import('../../node_modules/@vueuse/core').syncRefs
   const templateRef: typeof import('../../node_modules/@vueuse/core').templateRef
   const throttledRef: typeof import('../../node_modules/@vueuse/core').throttledRef
   const throttledWatch: typeof import('../../node_modules/@vueuse/core').throttledWatch
-  const toRaw: typeof import('../../node_modules/vue').toRaw
+  const toRaw: typeof import('vue').toRaw
   const toReactive: typeof import('../../node_modules/@vueuse/core').toReactive
-  const toRef: typeof import('../../node_modules/vue').toRef
-  const toRefs: typeof import('../../node_modules/vue').toRefs
-  const toValue: typeof import('../../node_modules/vue').toValue
-  const triggerRef: typeof import('../../node_modules/vue').triggerRef
+  const toRef: typeof import('vue').toRef
+  const toRefs: typeof import('vue').toRefs
+  const toValue: typeof import('vue').toValue
+  const triggerRef: typeof import('vue').triggerRef
   const tryOnBeforeMount: typeof import('../../node_modules/@vueuse/core').tryOnBeforeMount
   const tryOnBeforeUnmount: typeof import('../../node_modules/@vueuse/core').tryOnBeforeUnmount
   const tryOnMounted: typeof import('../../node_modules/@vueuse/core').tryOnMounted
   const tryOnScopeDispose: typeof import('../../node_modules/@vueuse/core').tryOnScopeDispose
   const tryOnUnmounted: typeof import('../../node_modules/@vueuse/core').tryOnUnmounted
   const tryUseNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt').tryUseNuxtApp
-  const unref: typeof import('../../node_modules/vue').unref
+  const unref: typeof import('vue').unref
   const unrefElement: typeof import('../../node_modules/@vueuse/core').unrefElement
   const until: typeof import('../../node_modules/@vueuse/core').until
+  const unwrapSlot: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node').flatUnwrap
   const updateAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').updateAppConfig
   const useActiveElement: typeof import('../../node_modules/@vueuse/core').useActiveElement
   const useAnimate: typeof import('../../node_modules/@vueuse/core').useAnimate
@@ -168,7 +176,7 @@ declare global {
   const useAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').useAsyncData
   const useAsyncQueue: typeof import('../../node_modules/@vueuse/core').useAsyncQueue
   const useAsyncState: typeof import('../../node_modules/@vueuse/core').useAsyncState
-  const useAttrs: typeof import('../../node_modules/vue').useAttrs
+  const useAttrs: typeof import('vue').useAttrs
   const useBase64: typeof import('../../node_modules/@vueuse/core').useBase64
   const useBattery: typeof import('../../node_modules/@vueuse/core').useBattery
   const useBluetooth: typeof import('../../node_modules/@vueuse/core').useBluetooth
@@ -184,10 +192,10 @@ declare global {
   const useCookie: typeof import('../../node_modules/nuxt/dist/app/composables/cookie').useCookie
   const useCountdown: typeof import('../../node_modules/@vueuse/core').useCountdown
   const useCounter: typeof import('../../node_modules/@vueuse/core').useCounter
-  const useCssModule: typeof import('../../node_modules/vue').useCssModule
+  const useCssModule: typeof import('vue').useCssModule
   const useCssSupports: typeof import('../../node_modules/@vueuse/core').useCssSupports
   const useCssVar: typeof import('../../node_modules/@vueuse/core').useCssVar
-  const useCssVars: typeof import('../../node_modules/vue').useCssVars
+  const useCssVars: typeof import('vue').useCssVars
   const useCurrentElement: typeof import('../../node_modules/@vueuse/core').useCurrentElement
   const useCycleList: typeof import('../../node_modules/@vueuse/core').useCycleList
   const useDark: typeof import('../../node_modules/@vueuse/core').useDark
@@ -226,7 +234,7 @@ declare global {
   const useHead: typeof import('../../node_modules/nuxt/dist/app/composables/head').useHead
   const useHeadSafe: typeof import('../../node_modules/nuxt/dist/app/composables/head').useHeadSafe
   const useHydration: typeof import('../../node_modules/nuxt/dist/app/composables/hydrate').useHydration
-  const useId: typeof import('../../node_modules/vue').useId
+  const useId: typeof import('vue').useId
   const useIdle: typeof import('../../node_modules/@vueuse/core').useIdle
   const useInfiniteScroll: typeof import('../../node_modules/@vueuse/core').useInfiniteScroll
   const useIntersectionObserver: typeof import('../../node_modules/@vueuse/core').useIntersectionObserver
@@ -236,7 +244,7 @@ declare global {
   const useLastChanged: typeof import('../../node_modules/@vueuse/core').useLastChanged
   const useLazyAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').useLazyAsyncData
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch').useLazyFetch
-  const useLink: typeof import('../../node_modules/vue-router').useLink
+  const useLink: typeof import('vue-router').useLink
   const useLoadingIndicator: typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator').useLoadingIndicator
   const useLocalStorage: typeof import('../../node_modules/@vueuse/core').useLocalStorage
   const useMagicKeys: typeof import('../../node_modules/@vueuse/core').useMagicKeys
@@ -245,7 +253,7 @@ declare global {
   const useMediaQuery: typeof import('../../node_modules/@vueuse/core').useMediaQuery
   const useMemoize: typeof import('../../node_modules/@vueuse/core').useMemoize
   const useMemory: typeof import('../../node_modules/@vueuse/core').useMemory
-  const useModel: typeof import('../../node_modules/vue').useModel
+  const useModel: typeof import('vue').useModel
   const useMounted: typeof import('../../node_modules/@vueuse/core').useMounted
   const useMouse: typeof import('../../node_modules/@vueuse/core').useMouse
   const useMouseInElement: typeof import('../../node_modules/@vueuse/core').useMouseInElement
@@ -330,9 +338,9 @@ declare global {
   const useServerHeadSafe: typeof import('../../node_modules/nuxt/dist/app/composables/head').useServerHeadSafe
   const useServerSeoMeta: typeof import('../../node_modules/nuxt/dist/app/composables/head').useServerSeoMeta
   const useSessionStorage: typeof import('../../node_modules/@vueuse/core').useSessionStorage
-  const useShadowRoot: typeof import('../../node_modules/vue').useShadowRoot
+  const useShadowRoot: typeof import('vue').useShadowRoot
   const useShare: typeof import('../../node_modules/@vueuse/core').useShare
-  const useSlots: typeof import('../../node_modules/vue').useSlots
+  const useSlots: typeof import('vue').useSlots
   const useSorted: typeof import('../../node_modules/@vueuse/core').useSorted
   const useSpeechRecognition: typeof import('../../node_modules/@vueuse/core').useSpeechRecognition
   const useSpeechSynthesis: typeof import('../../node_modules/@vueuse/core').useSpeechSynthesis
@@ -342,7 +350,7 @@ declare global {
   const useStyleTag: typeof import('../../node_modules/@vueuse/core').useStyleTag
   const useSupported: typeof import('../../node_modules/@vueuse/core').useSupported
   const useSwipe: typeof import('../../node_modules/@vueuse/core').useSwipe
-  const useTemplateRef: typeof import('../../node_modules/vue').useTemplateRef
+  const useTemplateRef: typeof import('vue').useTemplateRef
   const useTemplateRefsList: typeof import('../../node_modules/@vueuse/core').useTemplateRefsList
   const useTextDirection: typeof import('../../node_modules/@vueuse/core').useTextDirection
   const useTextSelection: typeof import('../../node_modules/@vueuse/core').useTextSelection
@@ -361,7 +369,7 @@ declare global {
   const useToString: typeof import('../../node_modules/@vueuse/core').useToString
   const useToggle: typeof import('../../node_modules/@vueuse/core').useToggle
   const useTransition: typeof import('../../node_modules/@vueuse/core').useTransition
-  const useTransitionState: typeof import('../../node_modules/vue').useTransitionState
+  const useTransitionState: typeof import('vue').useTransitionState
   const useUrlSearchParams: typeof import('../../node_modules/@vueuse/core').useUrlSearchParams
   const useUserMedia: typeof import('../../node_modules/@vueuse/core').useUserMedia
   const useVModel: typeof import('../../node_modules/@vueuse/core').useVModel
@@ -376,34 +384,34 @@ declare global {
   const useWindowFocus: typeof import('../../node_modules/@vueuse/core').useWindowFocus
   const useWindowScroll: typeof import('../../node_modules/@vueuse/core').useWindowScroll
   const useWindowSize: typeof import('../../node_modules/@vueuse/core').useWindowSize
-  const watch: typeof import('../../node_modules/vue').watch
+  const watch: typeof import('vue').watch
   const watchArray: typeof import('../../node_modules/@vueuse/core').watchArray
   const watchAtMost: typeof import('../../node_modules/@vueuse/core').watchAtMost
   const watchDebounced: typeof import('../../node_modules/@vueuse/core').watchDebounced
   const watchDeep: typeof import('../../node_modules/@vueuse/core').watchDeep
-  const watchEffect: typeof import('../../node_modules/vue').watchEffect
+  const watchEffect: typeof import('vue').watchEffect
   const watchIgnorable: typeof import('../../node_modules/@vueuse/core').watchIgnorable
   const watchImmediate: typeof import('../../node_modules/@vueuse/core').watchImmediate
   const watchOnce: typeof import('../../node_modules/@vueuse/core').watchOnce
   const watchPausable: typeof import('../../node_modules/@vueuse/core').watchPausable
-  const watchPostEffect: typeof import('../../node_modules/vue').watchPostEffect
-  const watchSyncEffect: typeof import('../../node_modules/vue').watchSyncEffect
+  const watchPostEffect: typeof import('vue').watchPostEffect
+  const watchSyncEffect: typeof import('vue').watchSyncEffect
   const watchThrottled: typeof import('../../node_modules/@vueuse/core').watchThrottled
   const watchTriggerable: typeof import('../../node_modules/@vueuse/core').watchTriggerable
   const watchWithFilter: typeof import('../../node_modules/@vueuse/core').watchWithFilter
   const whenever: typeof import('../../node_modules/@vueuse/core').whenever
-  const withCtx: typeof import('../../node_modules/vue').withCtx
-  const withDirectives: typeof import('../../node_modules/vue').withDirectives
-  const withKeys: typeof import('../../node_modules/vue').withKeys
-  const withMemo: typeof import('../../node_modules/vue').withMemo
-  const withModifiers: typeof import('../../node_modules/vue').withModifiers
-  const withScopeId: typeof import('../../node_modules/vue').withScopeId
+  const withCtx: typeof import('vue').withCtx
+  const withDirectives: typeof import('vue').withDirectives
+  const withKeys: typeof import('vue').withKeys
+  const withMemo: typeof import('vue').withMemo
+  const withModifiers: typeof import('vue').withModifiers
+  const withScopeId: typeof import('vue').withScopeId
 }
 // for type re-export
 declare global {
   // @ts-ignore
-  export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from '../../node_modules/vue'
-  import('../../node_modules/vue')
+  export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
+  import('vue')
 }
 // for vue template auto import
 import { UnwrapRef } from 'vue'
@@ -418,7 +426,8 @@ declare module 'vue' {
     readonly clearError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['clearError']>
     readonly clearNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['clearNuxtData']>
     readonly clearNuxtState: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/state')['clearNuxtState']>
-    readonly computed: UnwrapRef<typeof import('../../node_modules/vue')['computed']>
+    readonly cn: UnwrapRef<typeof import('../../utils/cn')['cn']>
+    readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly computedAsync: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedAsync']>
     readonly computedEager: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedEager']>
     readonly computedInject: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedInject']>
@@ -435,12 +444,12 @@ declare module 'vue' {
     readonly createSharedComposable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['createSharedComposable']>
     readonly createTemplatePromise: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['createTemplatePromise']>
     readonly createUnrefFn: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['createUnrefFn']>
-    readonly customRef: UnwrapRef<typeof import('../../node_modules/vue')['customRef']>
+    readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly debouncedRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['debouncedWatch']>
     readonly defineAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineAppConfig']>
-    readonly defineAsyncComponent: UnwrapRef<typeof import('../../node_modules/vue')['defineAsyncComponent']>
-    readonly defineComponent: UnwrapRef<typeof import('../../node_modules/vue')['defineComponent']>
+    readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
+    readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly defineLazyHydrationComponent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/lazy-hydration')['defineLazyHydrationComponent']>
     readonly defineNuxtComponent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/component')['defineNuxtComponent']>
     readonly defineNuxtLink: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/components/nuxt-link')['defineNuxtLink']>
@@ -451,74 +460,79 @@ declare module 'vue' {
     readonly definePayloadReducer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']>
     readonly definePayloadReviver: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']>
     readonly eagerComputed: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['eagerComputed']>
-    readonly effect: UnwrapRef<typeof import('../../node_modules/vue')['effect']>
-    readonly effectScope: UnwrapRef<typeof import('../../node_modules/vue')['effectScope']>
+    readonly effect: UnwrapRef<typeof import('vue')['effect']>
+    readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['extendRef']>
     readonly getAppManifest: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getAppManifest']>
-    readonly getCurrentInstance: UnwrapRef<typeof import('../../node_modules/vue')['getCurrentInstance']>
-    readonly getCurrentScope: UnwrapRef<typeof import('../../node_modules/vue')['getCurrentScope']>
+    readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
+    readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getRouteRules: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getRouteRules']>
-    readonly h: UnwrapRef<typeof import('../../node_modules/vue')['h']>
-    readonly hasInjectionContext: UnwrapRef<typeof import('../../node_modules/vue')['hasInjectionContext']>
+    readonly h: UnwrapRef<typeof import('vue')['h']>
+    readonly hasInjectionContext: UnwrapRef<typeof import('vue')['hasInjectionContext']>
     readonly ignorableWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['ignorableWatch']>
-    readonly inject: UnwrapRef<typeof import('../../node_modules/vue')['inject']>
+    readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['injectHead']>
     readonly injectLocal: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['injectLocal']>
     readonly isDefined: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['isDefined']>
     readonly isNuxtError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['isNuxtError']>
     readonly isPrerendered: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['isPrerendered']>
-    readonly isProxy: UnwrapRef<typeof import('../../node_modules/vue')['isProxy']>
-    readonly isReactive: UnwrapRef<typeof import('../../node_modules/vue')['isReactive']>
-    readonly isReadonly: UnwrapRef<typeof import('../../node_modules/vue')['isReadonly']>
-    readonly isRef: UnwrapRef<typeof import('../../node_modules/vue')['isRef']>
-    readonly isShallow: UnwrapRef<typeof import('../../node_modules/vue')['isShallow']>
+    readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
+    readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
+    readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
+    readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
+    readonly isShallow: UnwrapRef<typeof import('vue')['isShallow']>
     readonly isVue2: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi')['isVue2']>
     readonly isVue3: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi')['isVue3']>
     readonly loadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['loadPayload']>
     readonly makeDestructurable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['makeDestructurable']>
-    readonly markRaw: UnwrapRef<typeof import('../../node_modules/vue')['markRaw']>
+    readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly navigateTo: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['navigateTo']>
-    readonly nextTick: UnwrapRef<typeof import('../../node_modules/vue')['nextTick']>
-    readonly onActivated: UnwrapRef<typeof import('../../node_modules/vue')['onActivated']>
-    readonly onBeforeMount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../../node_modules/vue-router')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../../node_modules/vue-router')['onBeforeRouteUpdate']>
-    readonly onBeforeUnmount: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUnmount']>
-    readonly onBeforeUpdate: UnwrapRef<typeof import('../../node_modules/vue')['onBeforeUpdate']>
+    readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
+    readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
+    readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router')['onBeforeRouteUpdate']>
+    readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
+    readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
     readonly onClickOutside: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onClickOutside']>
-    readonly onDeactivated: UnwrapRef<typeof import('../../node_modules/vue')['onDeactivated']>
+    readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
     readonly onElementRemoval: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onElementRemoval']>
-    readonly onErrorCaptured: UnwrapRef<typeof import('../../node_modules/vue')['onErrorCaptured']>
+    readonly onErrorCaptured: UnwrapRef<typeof import('vue')['onErrorCaptured']>
     readonly onKeyStroke: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onKeyStroke']>
     readonly onLongPress: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onLongPress']>
-    readonly onMounted: UnwrapRef<typeof import('../../node_modules/vue')['onMounted']>
+    readonly onMounted: UnwrapRef<typeof import('vue')['onMounted']>
     readonly onNuxtReady: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ready')['onNuxtReady']>
     readonly onPrehydrate: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['onPrehydrate']>
-    readonly onRenderTracked: UnwrapRef<typeof import('../../node_modules/vue')['onRenderTracked']>
-    readonly onRenderTriggered: UnwrapRef<typeof import('../../node_modules/vue')['onRenderTriggered']>
-    readonly onScopeDispose: UnwrapRef<typeof import('../../node_modules/vue')['onScopeDispose']>
-    readonly onServerPrefetch: UnwrapRef<typeof import('../../node_modules/vue')['onServerPrefetch']>
+    readonly onRenderTracked: UnwrapRef<typeof import('vue')['onRenderTracked']>
+    readonly onRenderTriggered: UnwrapRef<typeof import('vue')['onRenderTriggered']>
+    readonly onScopeDispose: UnwrapRef<typeof import('vue')['onScopeDispose']>
+    readonly onServerPrefetch: UnwrapRef<typeof import('vue')['onServerPrefetch']>
     readonly onStartTyping: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['onStartTyping']>
-    readonly onUnmounted: UnwrapRef<typeof import('../../node_modules/vue')['onUnmounted']>
-    readonly onUpdated: UnwrapRef<typeof import('../../node_modules/vue')['onUpdated']>
-    readonly onWatcherCleanup: UnwrapRef<typeof import('../../node_modules/vue')['onWatcherCleanup']>
+    readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
+    readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
+    readonly onWatcherCleanup: UnwrapRef<typeof import('vue')['onWatcherCleanup']>
+    readonly parseMarkdown: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/parser')['parseMarkdown']>
     readonly pausableWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['pausableWatch']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']>
     readonly preloadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['preloadPayload']>
     readonly preloadRouteComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadRouteComponents']>
     readonly prerenderRoutes: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['prerenderRoutes']>
-    readonly provide: UnwrapRef<typeof import('../../node_modules/vue')['provide']>
+    readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly provideLocal: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['provideLocal']>
-    readonly proxyRefs: UnwrapRef<typeof import('../../node_modules/vue')['proxyRefs']>
+    readonly proxyRefs: UnwrapRef<typeof import('vue')['proxyRefs']>
+    readonly queryCollection: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/client')['queryCollection']>
+    readonly queryCollectionItemSurroundings: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/client')['queryCollectionItemSurroundings']>
+    readonly queryCollectionNavigation: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/client')['queryCollectionNavigation']>
+    readonly queryCollectionSearchSections: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/client')['queryCollectionSearchSections']>
     readonly reactify: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['reactify']>
     readonly reactifyObject: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['reactifyObject']>
-    readonly reactive: UnwrapRef<typeof import('../../node_modules/vue')['reactive']>
+    readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly reactiveComputed: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['reactiveComputed']>
     readonly reactiveOmit: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['reactiveOmit']>
     readonly reactivePick: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['reactivePick']>
-    readonly readonly: UnwrapRef<typeof import('../../node_modules/vue')['readonly']>
-    readonly ref: UnwrapRef<typeof import('../../node_modules/vue')['ref']>
+    readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
+    readonly ref: UnwrapRef<typeof import('vue')['ref']>
     readonly refAutoReset: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['refAutoReset']>
     readonly refDebounced: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['refDebounced']>
     readonly refDefault: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['refDefault']>
@@ -529,34 +543,36 @@ declare module 'vue' {
     readonly refreshNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['refreshNuxtData']>
     readonly reloadNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/chunk')['reloadNuxtApp']>
     readonly requestIdleCallback: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']>
-    readonly resolveComponent: UnwrapRef<typeof import('../../node_modules/vue')['resolveComponent']>
+    readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
     readonly setInterval: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/interval')['setInterval']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
     readonly setResponseStatus: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']>
-    readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/vue')['shallowReactive']>
-    readonly shallowReadonly: UnwrapRef<typeof import('../../node_modules/vue')['shallowReadonly']>
-    readonly shallowRef: UnwrapRef<typeof import('../../node_modules/vue')['shallowRef']>
+    readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
+    readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
+    readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
     readonly showError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['showError']>
+    readonly stringifyMarkdown: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/stringify')['stringifyMarkdown']>
     readonly syncRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['syncRef']>
     readonly syncRefs: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['syncRefs']>
     readonly templateRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['templateRef']>
     readonly throttledRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['throttledRef']>
     readonly throttledWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['throttledWatch']>
-    readonly toRaw: UnwrapRef<typeof import('../../node_modules/vue')['toRaw']>
+    readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
     readonly toReactive: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['toReactive']>
-    readonly toRef: UnwrapRef<typeof import('../../node_modules/vue')['toRef']>
-    readonly toRefs: UnwrapRef<typeof import('../../node_modules/vue')['toRefs']>
-    readonly toValue: UnwrapRef<typeof import('../../node_modules/vue')['toValue']>
-    readonly triggerRef: UnwrapRef<typeof import('../../node_modules/vue')['triggerRef']>
+    readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
+    readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
+    readonly toValue: UnwrapRef<typeof import('vue')['toValue']>
+    readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly tryOnBeforeMount: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnBeforeMount']>
     readonly tryOnBeforeUnmount: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnBeforeUnmount']>
     readonly tryOnMounted: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnMounted']>
     readonly tryOnScopeDispose: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnScopeDispose']>
     readonly tryOnUnmounted: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnUnmounted']>
     readonly tryUseNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']>
-    readonly unref: UnwrapRef<typeof import('../../node_modules/vue')['unref']>
+    readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly unrefElement: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['unrefElement']>
     readonly until: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['until']>
+    readonly unwrapSlot: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node')['flatUnwrap']>
     readonly updateAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['updateAppConfig']>
     readonly useActiveElement: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useActiveElement']>
     readonly useAnimate: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useAnimate']>
@@ -576,7 +592,7 @@ declare module 'vue' {
     readonly useAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']>
     readonly useAsyncQueue: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useAsyncQueue']>
     readonly useAsyncState: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useAsyncState']>
-    readonly useAttrs: UnwrapRef<typeof import('../../node_modules/vue')['useAttrs']>
+    readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useBase64: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBluetooth']>
@@ -592,10 +608,10 @@ declare module 'vue' {
     readonly useCookie: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/cookie')['useCookie']>
     readonly useCountdown: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCountdown']>
     readonly useCounter: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCounter']>
-    readonly useCssModule: UnwrapRef<typeof import('../../node_modules/vue')['useCssModule']>
+    readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssSupports: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCssSupports']>
     readonly useCssVar: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCssVar']>
-    readonly useCssVars: UnwrapRef<typeof import('../../node_modules/vue')['useCssVars']>
+    readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useCurrentElement: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCurrentElement']>
     readonly useCycleList: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCycleList']>
     readonly useDark: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useDark']>
@@ -634,7 +650,7 @@ declare module 'vue' {
     readonly useHead: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHead']>
     readonly useHeadSafe: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useHeadSafe']>
     readonly useHydration: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/hydrate')['useHydration']>
-    readonly useId: UnwrapRef<typeof import('../../node_modules/vue')['useId']>
+    readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useIdle: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIdle']>
     readonly useInfiniteScroll: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useInfiniteScroll']>
     readonly useIntersectionObserver: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIntersectionObserver']>
@@ -644,7 +660,7 @@ declare module 'vue' {
     readonly useLastChanged: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useLastChanged']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
-    readonly useLink: UnwrapRef<typeof import('../../node_modules/vue-router')['useLink']>
+    readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
     readonly useLoadingIndicator: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator')['useLoadingIndicator']>
     readonly useLocalStorage: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useLocalStorage']>
     readonly useMagicKeys: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMagicKeys']>
@@ -653,7 +669,7 @@ declare module 'vue' {
     readonly useMediaQuery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMediaQuery']>
     readonly useMemoize: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMemoize']>
     readonly useMemory: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMemory']>
-    readonly useModel: UnwrapRef<typeof import('../../node_modules/vue')['useModel']>
+    readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useMounted: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMounted']>
     readonly useMouse: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMouse']>
     readonly useMouseInElement: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useMouseInElement']>
@@ -738,9 +754,9 @@ declare module 'vue' {
     readonly useServerHeadSafe: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useServerHeadSafe']>
     readonly useServerSeoMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/head')['useServerSeoMeta']>
     readonly useSessionStorage: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSessionStorage']>
-    readonly useShadowRoot: UnwrapRef<typeof import('../../node_modules/vue')['useShadowRoot']>
+    readonly useShadowRoot: UnwrapRef<typeof import('vue')['useShadowRoot']>
     readonly useShare: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useShare']>
-    readonly useSlots: UnwrapRef<typeof import('../../node_modules/vue')['useSlots']>
+    readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useSorted: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSorted']>
     readonly useSpeechRecognition: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSpeechRecognition']>
     readonly useSpeechSynthesis: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSpeechSynthesis']>
@@ -750,7 +766,7 @@ declare module 'vue' {
     readonly useStyleTag: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useStyleTag']>
     readonly useSupported: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSupported']>
     readonly useSwipe: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSwipe']>
-    readonly useTemplateRef: UnwrapRef<typeof import('../../node_modules/vue')['useTemplateRef']>
+    readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTemplateRefsList: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useTemplateRefsList']>
     readonly useTextDirection: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useTextDirection']>
     readonly useTextSelection: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useTextSelection']>
@@ -769,7 +785,7 @@ declare module 'vue' {
     readonly useToString: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useToString']>
     readonly useToggle: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useToggle']>
     readonly useTransition: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useTransition']>
-    readonly useTransitionState: UnwrapRef<typeof import('../../node_modules/vue')['useTransitionState']>
+    readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
     readonly useUrlSearchParams: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUrlSearchParams']>
     readonly useUserMedia: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUserMedia']>
     readonly useVModel: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVModel']>
@@ -784,27 +800,27 @@ declare module 'vue' {
     readonly useWindowFocus: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useWindowFocus']>
     readonly useWindowScroll: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useWindowSize']>
-    readonly watch: UnwrapRef<typeof import('../../node_modules/vue')['watch']>
+    readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchArray: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchArray']>
     readonly watchAtMost: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchAtMost']>
     readonly watchDebounced: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchDebounced']>
     readonly watchDeep: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchDeep']>
-    readonly watchEffect: UnwrapRef<typeof import('../../node_modules/vue')['watchEffect']>
+    readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchIgnorable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchIgnorable']>
     readonly watchImmediate: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchImmediate']>
     readonly watchOnce: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchOnce']>
     readonly watchPausable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchPausable']>
-    readonly watchPostEffect: UnwrapRef<typeof import('../../node_modules/vue')['watchPostEffect']>
-    readonly watchSyncEffect: UnwrapRef<typeof import('../../node_modules/vue')['watchSyncEffect']>
+    readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
+    readonly watchSyncEffect: UnwrapRef<typeof import('vue')['watchSyncEffect']>
     readonly watchThrottled: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchThrottled']>
     readonly watchTriggerable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchTriggerable']>
     readonly watchWithFilter: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['watchWithFilter']>
     readonly whenever: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['whenever']>
-    readonly withCtx: UnwrapRef<typeof import('../../node_modules/vue')['withCtx']>
-    readonly withDirectives: UnwrapRef<typeof import('../../node_modules/vue')['withDirectives']>
-    readonly withKeys: UnwrapRef<typeof import('../../node_modules/vue')['withKeys']>
-    readonly withMemo: UnwrapRef<typeof import('../../node_modules/vue')['withMemo']>
-    readonly withModifiers: UnwrapRef<typeof import('../../node_modules/vue')['withModifiers']>
-    readonly withScopeId: UnwrapRef<typeof import('../../node_modules/vue')['withScopeId']>
+    readonly withCtx: UnwrapRef<typeof import('vue')['withCtx']>
+    readonly withDirectives: UnwrapRef<typeof import('vue')['withDirectives']>
+    readonly withKeys: UnwrapRef<typeof import('vue')['withKeys']>
+    readonly withMemo: UnwrapRef<typeof import('vue')['withMemo']>
+    readonly withModifiers: UnwrapRef<typeof import('vue')['withModifiers']>
+    readonly withScopeId: UnwrapRef<typeof import('vue')['withScopeId']>
   }
 }

@@ -11,9 +11,21 @@ export default defineNuxtConfig({
   ],
   
   modules: [
+    '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt'
   ],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: ['ts', 'js', 'css', 'json', 'bash', 'vue', 'python', 'md']
+        }
+      }
+    }
+  },
 
   // Site configuration for SEO
   site: {

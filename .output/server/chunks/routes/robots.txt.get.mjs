@@ -7,6 +7,7 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
+import 'better-sqlite3';
 
 const robots_txt_get = defineEventHandler(() => {
   return `User-agent: *

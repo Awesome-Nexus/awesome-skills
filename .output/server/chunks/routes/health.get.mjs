@@ -7,6 +7,7 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
+import 'better-sqlite3';
 
 const health_get = defineEventHandler(() => {
   return { status: "ok", timestamp: (/* @__PURE__ */ new Date()).toISOString() };
