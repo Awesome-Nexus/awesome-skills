@@ -18,7 +18,6 @@ const sections = [
 
 <template>
   <div class="max-w-5xl mx-auto space-y-8">
-    <!-- Header -->
     <div class="flex items-start gap-6">
       <div class="p-4 bg-rose-500/20 rounded-2xl">
         <Plug class="w-10 h-10 text-rose-400" />
@@ -31,8 +30,7 @@ const sections = [
       </div>
     </div>
 
-    <!-- Full Resource Link -->
-    <div class="p-6 bg-rose-500/10 border border-rose-500/20 rounded-xl">
+    <div class="glass p-6">
       <div class="flex items-center justify-between flex-wrap gap-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">View Complete Links Catalog</h3>
@@ -42,7 +40,7 @@ const sections = [
           href="https://github.com/lpatel/awesome-skills/blob/main/resources/links/README.md"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 bg-rose-500 hover:bg-rose-600 text-white rounded-lg font-medium transition-colors"
+          class="btn-main inline-flex items-center gap-2"
         >
           View on GitHub
           <ExternalLink class="w-4 h-4" />
@@ -50,8 +48,7 @@ const sections = [
       </div>
     </div>
 
-    <!-- What is MCP -->
-    <div class="p-6 bg-space-900 rounded-xl border border-space-800">
+    <div class="glass p-6">
       <h3 class="text-lg font-semibold text-white mb-3">What is MCP?</h3>
       <p class="text-gray-400 leading-relaxed">
         The Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to LLMs. 
@@ -60,19 +57,18 @@ const sections = [
       </p>
     </div>
 
-    <!-- Resource Sections -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div 
         v-for="section in sections" 
         :key="section.name"
-        class="p-6 bg-space-900 rounded-xl border border-space-800"
+        class="glass p-6"
       >
         <h3 class="text-lg font-semibold text-white mb-4">{{ section.name }}</h3>
         <div class="flex flex-wrap gap-2">
           <span 
             v-for="item in section.items" 
             :key="item"
-            class="px-3 py-1 bg-space-800 text-gray-300 text-sm rounded-full"
+            class="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full"
           >
             {{ item }}
           </span>
@@ -80,21 +76,20 @@ const sections = [
       </div>
     </div>
 
-    <!-- Quick Stats -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-rose-400">150+</div>
         <div class="text-sm text-gray-400">MCP Servers</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-rose-400">50+</div>
         <div class="text-sm text-gray-400">Official</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-rose-400">100+</div>
         <div class="text-sm text-gray-400">Community</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-rose-400">Open</div>
         <div class="text-sm text-gray-400">Protocol</div>
       </div>

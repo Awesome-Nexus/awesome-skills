@@ -1,169 +1,125 @@
 <template>
-  <div class="min-h-screen bg-space-950 text-space-100 font-mono selection:bg-primary-500 selection:text-white">
-    <header class="border-b border-space-800 bg-space-900/50 backdrop-blur-md sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <NuxtLink to="/" class="flex items-center gap-3 group">
-          <div class="h-10 w-10 relative">
-             <div class="absolute inset-0 bg-primary-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-             <AppLogo class="relative z-10 text-primary-400 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all" />
+  <div class="min-h-screen bg-[#0B0C15] flex">
+    <!-- Sidebar -->
+    <aside class="fixed inset-y-0 left-0 z-50 w-72 bg-[#131620] border-r border-white/5 flex flex-col">
+      <!-- Logo -->
+      <div class="p-6 border-b border-white/5">
+        <NuxtLink to="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
           </div>
-          <span class="text-2xl font-bold text-primary-400 tracking-tight">
-            Awesome Skills
-          </span>
+          <div>
+            <h1 class="text-lg font-bold text-white">Awesome Skills</h1>
+            <p class="text-xs text-gray-500">AI Development Hub</p>
+          </div>
         </NuxtLink>
-        
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex gap-6 items-center">
-          <!-- Search Button -->
-          <NuxtLink 
-            to="/search"
-            class="flex items-center gap-2 px-3 py-1.5 bg-space-800 hover:bg-space-700 text-gray-300 hover:text-white rounded-lg transition-colors text-sm font-medium"
-          >
-            <Icon name="search" class="w-4 h-4" />
-            <span class="hidden lg:inline">Search</span>
-          </NuxtLink>
-
-          <NuxtLink 
-            to="/about" 
-            class="flex items-center gap-2 text-gray-300 hover:text-primary-400 transition-colors text-sm font-medium"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
-            </svg>
-            About
-          </NuxtLink>
-          <a 
-            href="https://github.com/lpatel/awesome-skills" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 text-gray-300 hover:text-primary-400 transition-colors text-sm font-medium"
-            title="View on GitHub"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-              <path d="M9 18c-4.51 2-5-2-7-2"/>
-            </svg>
-            GitHub
-          </a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button 
-          @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden p-2 rounded-lg hover:bg-space-800 transition-colors"
-        >
-          <svg v-if="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 6-12 12"/><path d="m6 6 12 12"/></svg>
-        </button>
       </div>
 
-      <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden border-t border-space-800 bg-space-900/95 backdrop-blur-md">
-        <nav class="px-4 py-4 space-y-2">
-          <!-- Search -->
-          <NuxtLink 
-            to="/search"
-            @click="mobileMenuOpen = false"
-            class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-primary-400 hover:bg-space-800 rounded-lg transition-colors"
-          >
-            <Icon name="search" class="w-5 h-5" />
-            <span>Search Resources</span>
+      <!-- Navigation -->
+      <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+        <div class="mb-4">
+          <p class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Categories</p>
+          <NuxtLink v-for="item in categories" :key="item.path" :to="item.path" class="sidebar-link" active-class="sidebar-link-active">
+            <component :is="item.icon" class="w-5 h-5" />
+            <span>{{ item.name }}</span>
+            <span v-if="item.badge" class="ml-auto px-2 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">
+              {{ item.badge }}
+            </span>
           </NuxtLink>
+        </div>
 
-          <NuxtLink 
-            to="/about" 
-            @click="mobileMenuOpen = false"
-            class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-primary-400 hover:bg-space-800 rounded-lg transition-colors"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+        <div class="pt-4 border-t border-white/5">
+          <p class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">General</p>
+          <NuxtLink to="/search" class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+            <span>Search</span>
+          </NuxtLink>
+          <NuxtLink to="/about" class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
             </svg>
             <span>About</span>
           </NuxtLink>
-          <a 
-            href="https://github.com/lpatel/awesome-skills" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            @click="mobileMenuOpen = false"
-            class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-primary-400 hover:bg-space-800 rounded-lg transition-colors"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-              <path d="M9 18c-4.51 2-5-2-7-2"/>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </nav>
+        </div>
+      </nav>
+
+      <!-- Footer -->
+      <div class="p-4 border-t border-white/5">
+        <a href="https://github.com/lpatel/awesome-skills" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
       </div>
-    </header>
-    
-    <!-- Page Content with Transition -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <NuxtPage />
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-72 min-h-screen">
+      <!-- Top Header -->
+      <header class="sticky top-0 z-40 bg-[#0B0C15]/80 backdrop-blur-xl border-b border-white/5">
+        <div class="flex items-center justify-between px-8 h-16">
+          <div class="flex items-center gap-4">
+            <div class="relative w-96">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+              <input 
+                type="text" 
+                placeholder="Search AI resources, tools, frameworks..." 
+                class="input-search pl-10"
+              />
+              <kbd class="absolute right-3 top-1/2 -translate-y-1/2 px-2 py-1 text-xs text-gray-500 bg-white/5 rounded border border-white/10">⌘K</kbd>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full">
+              <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              <span class="text-sm text-blue-400">5,100+ Resources</span>
+            </div>
+            
+            <span class="px-2 py-1 text-xs text-gray-500 bg-white/5 rounded border border-white/10">v1.0.0</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="p-8">
+        <slot />
+      </div>
     </main>
-    
-    <footer class="border-t border-space-800 py-12 mt-16 bg-space-900/50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <!-- Brand Section -->
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="h-8 w-8">
-                <AppLogo />
-              </div>
-              <span class="text-xl font-bold text-white">Awesome Skills</span>
-            </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Curated AI development resources for Systems, Kits, Intelligence, Learning, Links, and Security.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="space-y-4">
-            <h3 class="text-white font-semibold">Quick Links</h3>
-            <div class="space-y-2">
-              <NuxtLink to="/resources/systems" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Systems</NuxtLink>
-              <NuxtLink to="/resources/kits" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Kits</NuxtLink>
-              <NuxtLink to="/resources/intelligence" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Intelligence</NuxtLink>
-              <NuxtLink to="/resources/learning" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Learning</NuxtLink>
-              <NuxtLink to="/resources/links" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Links</NuxtLink>
-              <NuxtLink to="/resources/security" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Security</NuxtLink>
-            </div>
-          </div>
-
-          <!-- Connect -->
-          <div class="space-y-4">
-            <h3 class="text-white font-semibold">Connect</h3>
-            <div class="space-y-2">
-              <NuxtLink to="/about" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">About Us</NuxtLink>
-              <NuxtLink to="/search" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">Search</NuxtLink>
-              <a href="https://github.com/lpatel/awesome-skills" target="_blank" rel="noopener noreferrer" class="block text-gray-400 hover:text-primary-400 transition-colors text-sm">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Section -->
-        <div class="border-t border-space-800 pt-8 space-y-4 text-center">
-          <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
-            <span>Built with</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-red-400">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-            <span>and dedication to AI</span>
-          </div>
-          <p class="text-gray-500 text-sm">&copy; {{ new Date().getFullYear() }} Awesome Skills. Empowering AI developers worldwide.</p>
-          <p class="text-gray-500 text-xs mt-2">Last Published: v1.0.0 (February 1, 2026)</p>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
-<script setup>
-const mobileMenuOpen = ref(false)
+<script setup lang="ts">
+import { 
+  Cpu, 
+  Wrench, 
+  Brain, 
+  BookOpen, 
+  Plug,
+  Shield,
+  Search,
+  Info
+} from 'lucide-vue-next'
 
-// Close mobile menu when route changes
-watch(() => useRoute().path, () => {
-  mobileMenuOpen.value = false
-})
+const categories = [
+  { name: 'Systems', path: '/resources/systems', icon: Cpu, badge: '200+' },
+  { name: 'Kits', path: '/resources/kits', icon: Wrench, badge: '500+' },
+  { name: 'Intelligence', path: '/resources/intelligence', icon: Brain, badge: '150+' },
+  { name: 'Learning', path: '/resources/learning', icon: BookOpen, badge: '500+' },
+  { name: 'Links', path: '/resources/links', icon: Plug, badge: '60+' },
+  { name: 'Security', path: '/resources/security', icon: Shield, badge: '100+' },
+]
 </script>

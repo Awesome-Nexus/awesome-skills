@@ -18,7 +18,6 @@ const sections = [
 
 <template>
   <div class="max-w-5xl mx-auto space-y-8">
-    <!-- Header -->
     <div class="flex items-start gap-6">
       <div class="p-4 bg-emerald-500/20 rounded-2xl">
         <Wrench class="w-10 h-10 text-emerald-400" />
@@ -31,8 +30,7 @@ const sections = [
       </div>
     </div>
 
-    <!-- Full Resource Link -->
-    <div class="p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+    <div class="glass p-6">
       <div class="flex items-center justify-between flex-wrap gap-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">View Complete Kits Catalog</h3>
@@ -42,7 +40,7 @@ const sections = [
           href="https://github.com/lpatel/awesome-skills/blob/main/resources/kits/README.md"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-medium transition-colors"
+          class="btn-main inline-flex items-center gap-2"
         >
           View on GitHub
           <ExternalLink class="w-4 h-4" />
@@ -50,19 +48,18 @@ const sections = [
       </div>
     </div>
 
-    <!-- Resource Sections -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div 
         v-for="section in sections" 
         :key="section.name"
-        class="p-6 bg-space-900 rounded-xl border border-space-800"
+        class="glass p-6"
       >
         <h3 class="text-lg font-semibold text-white mb-4">{{ section.name }}</h3>
         <div class="flex flex-wrap gap-2">
           <span 
             v-for="item in section.items" 
             :key="item"
-            class="px-3 py-1 bg-space-800 text-gray-300 text-sm rounded-full"
+            class="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full"
           >
             {{ item }}
           </span>
@@ -70,21 +67,20 @@ const sections = [
       </div>
     </div>
 
-    <!-- Quick Stats -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-emerald-400">500+</div>
         <div class="text-sm text-gray-400">Tools</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-emerald-400">50+</div>
         <div class="text-sm text-gray-400">Frameworks</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-emerald-400">20+</div>
         <div class="text-sm text-gray-400">Vector DBs</div>
       </div>
-      <div class="p-4 bg-space-900/50 rounded-xl border border-space-800 text-center">
+      <div class="glass p-4 text-center">
         <div class="text-2xl font-bold text-emerald-400">100%</div>
         <div class="text-sm text-gray-400">Open Source</div>
       </div>
